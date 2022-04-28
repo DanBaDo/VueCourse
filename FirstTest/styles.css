@@ -1,8 +1,9 @@
 :root {
     --main-font-size: 1rem;
+    --main-border-size: 1px;
     --box-border-color: black;
     --box-gaps-size: var(--main-font-size);
-    --element-border-color: rgba(0,0,0,0.3);
+    --element-border-color: rgba(0,0,0,0.2);
     --element-gaps-size: calc(var(--box-gaps-size)/2);
     --element-shadow-offset: calc( var(--element-gaps-size) / 2 );
 }
@@ -12,13 +13,13 @@ body {
 }
 
 .visible-box {
-    border: solid 1px var(--box-border-color);
-    padding: 1rem;
+    border: solid var(--main-border-size) var(--box-border-color);
+    padding: var(--box-gaps-size);
 }
 
 #tasks-list > li {
     list-style: none;
-    border: var(--element-border-color);
+    border: solid var(--main-border-size) var(--element-border-color);
     border-radius: calc(2 * var(--element-gaps-size));
     box-shadow:
         calc(-1 * var(--element-shadow-offset))
