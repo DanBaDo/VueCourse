@@ -1,0 +1,31 @@
+:root {
+    --main-font-size: 1rem;
+    --box-border-color: black;
+    --box-gaps-size: var(--main-font-size);
+    --element-border-color: rgba(0,0,0,0.3);
+    --element-gaps-size: calc(var(--box-gaps-size)/2);
+    --element-shadow-offset: calc( var(--element-gaps-size) / 2 );
+}
+
+body {
+    font-size: var(--main-font-size);
+}
+
+.visible-box {
+    border: solid 1px var(--box-border-color);
+    padding: 1rem;
+}
+
+#tasks-list > li {
+    list-style: none;
+    border: var(--element-border-color);
+    border-radius: calc(2 * var(--element-gaps-size));
+    box-shadow:
+        calc(-1 * var(--element-shadow-offset))
+        var(--element-shadow-offset)
+        var(--element-gaps-size)
+        var(--element-border-color)
+    ;
+    padding: var(--element-gaps-size);
+    margin: var(--element-gaps-size) 0;
+}
