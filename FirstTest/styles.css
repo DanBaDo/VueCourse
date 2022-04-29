@@ -2,10 +2,11 @@
     --main-font-size: 1rem;
     --main-border-size: 1px;
     --box-border-color: black;
+    --golden-ratio: 1.62;
     --box-gaps-size: var(--main-font-size);
     --element-border-color: rgba(0,0,0,0.2);
-    --element-gaps-size: calc(var(--box-gaps-size)/2);
-    --element-shadow-offset: calc( var(--element-gaps-size) / 2 );
+    --element-gaps-size: calc(var(--box-gaps-size) / var(--golden-ratio));
+    --element-shadow-offset: calc( var(--element-gaps-size) / var(--golden-ratio) );
 }
 
 body {
