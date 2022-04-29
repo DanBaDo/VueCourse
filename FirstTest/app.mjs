@@ -1,4 +1,3 @@
-console.log("Starting Vue");
 Vue.createApp({
     data () {
         return {

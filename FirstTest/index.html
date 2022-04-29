@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Widget wiithout building tools</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./app.mjs" type="module"></script>
 </head>
 <body>
     <h1>Basic Vue test</h1>
     <p>This paragrph is out of Vue app.</p>
     <div id="app" class="visible-box">
+    <!-- Starting Vue app controlled zone -->
         <input type="text" v-model="newTask" placeholder="Add a new task...">
         <button v-on:click="addTask">Add task</button>
         <ul id="tasks-list" class="visible-box">
             <li v-for="task in tasks">{{ task }}</li>
         </ul>
+    <!-- End of Vue app controlled zone -->
     </div>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="./app.js"></script>
 </body>
 </html>
